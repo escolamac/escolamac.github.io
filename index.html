@@ -66,11 +66,36 @@
             width: 45%;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
             transition: transform 0.3s;
         }
 
         .imagens img:hover {
             transform: scale(1.05);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox:target {
+            display: flex;
         }
 
         footer {
@@ -102,9 +127,20 @@
         </div>
 
         <div class="imagens">
-            <img src="esa.jpg" alt="Horário de Aula 1">
-            <img src="fatec.jpg" alt="Horário de Aula 2">
+            <a href="#lightbox1"><img src="esa.jpg" alt="Horário ESA"></a>
+            <a href="#lightbox2"><img src="fatec.jpg" alt="Horário Fatec"></a>
         </div>
+
+        <!-- Lightbox para ESA -->
+        <div id="lightbox1" class="lightbox">
+            <a href="#"><img src="esa.jpg" alt="Horário ESA"></a>
+        </div>
+
+        <!-- Lightbox para Fatec -->
+        <div id="lightbox2" class="lightbox">
+            <a href="#"><img src="fatec.jpg" alt="Horário Fatec"></a>
+        </div>
+
     </main>
 
     <footer>
