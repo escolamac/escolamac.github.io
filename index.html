@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links Úteis</title>
+    <title>Links e Horários</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -21,11 +22,11 @@
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
         }
 
@@ -65,7 +66,7 @@
         .imagens img {
             width: 45%;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -74,7 +75,6 @@
             transform: scale(1.05);
         }
 
-        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -83,19 +83,70 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+            overflow: auto;
+            /* permite scroll se imagem maior que a tela */
         }
 
         .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: none;
+            /* permite que a imagem mantenha seu tamanho real */
+            max-height: none;
+            width: auto;
+            height: auto;
             border-radius: 10px;
+            cursor: grab;
+            /* indica que pode arrastar */
         }
+
+        .link-img {
+            display: inline-block;
+            width: 16px;
+            /* largura fixa do ícone */
+            height: 16px;
+            /* altura fixa do ícone */
+            margin-right: 6px;
+            /* espaço entre ícone e texto */
+            vertical-align: middle;
+            /* alinha a imagem com o texto */
+            object-fit: contain;
+            /* mantém proporção da imagem */
+        }
+
+
 
         .lightbox:target {
             display: flex;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table thead tr {
+            background-color: #0078d7;
+            color: white;
+        }
+
+        table a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        table a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -105,46 +156,132 @@
             color: #666;
             margin-top: 30px;
         }
+
+        @media(max-width: 600px) {
+            .imagens img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Links Úteis</h1>
+        <h1>Links e Horários</h1>
     </header>
 
     <main>
         <h2>Acessos Rápidos</h2>
-
         <div class="links">
-            <p>Planilha de consulta – <a target="_blank" href="https://prozedu-my.sharepoint.com/:x:/g/personal/wellington_favarao_prozeducacao_com_br/EbfpLKXtoGBIoUURRsnxGbsB1G_ORPLxwNbEkUigPdbaKw?e=skbUAI">link</a></p>
-            <p>Drive compartilhado – <a target="_blank" href="https://drive.google.com/drive/folders/16d8YuIkgQWCBvehqyV3HCyaSTGw3DpTT?usp=drive_link">link</a></p>
-            <p>Link Painel Apostilas – <a target="_blank" href="https://docs.google.com/spreadsheets/d/1AGSLX7d9dghVTaNKDF9Xs6rFti7E2ayEeYin8Y91Ymk/edit#gid=889651182">link</a></p>
+            <p><img src="https://siga.cps.sp.gov.br/etec/Resources/cps_ico.png" class="link-img" alt="ícone"> SIGA ETEC – <a target="_blank" href="https://siga.cps.sp.gov.br/siga/login.aspx">link</a></p>
+            <p><img src="https://siga.cps.sp.gov.br/etec/Resources/cps_ico.png" class="link-img" alt="ícone"> SIGA FATEC – <a target="_blank" href="https://siga.cps.sp.gov.br/fatec/login.aspx">link</a></p>
+
+            <p>Link Painel Apostilas – <a target="_blank"
+                    href="https://docs.google.com/spreadsheets/d/1AGSLX7d9dghVTaNKDF9Xs6rFti7E2ayEeYin8Y91Ymk/edit#gid=889651182">link</a>
+            </p>
             <p>Pincel 690026524 – <a target="_blank" href="https://essa.prozeducacao.com.br">link</a></p>
-            <p>Avaliação dos alunos – <a target="_blank" href="https://docs.google.com/spreadsheets/d/1GB4MAUjsjL2-irzhbMz2aLkYp4pNRGb0/edit#gid=2093794738">link</a></p>
-            <p>Pasta Drive Escola (pessoal) – <a target="_blank" href="https://drive.google.com/drive/folders/1SqJyGmw6J7Hzokc6VDP1zFz3dRjJORB9?usp=sharing">link</a></p>
-            <p>Diário Provisório – <a target="_blank" href="https://prozedu-my.sharepoint.com/:x:/g/personal/pedagogico_sp_prozeducacao_com_br/EbTffjGvHyVClB5raAH5ycUBEG-b79wp507hkvH9wa448Q?rtime=0_Ppvlb220g">link</a></p>
-            <p>Diários Digitais ESA – <a target="_blank" href="https://1drv.ms/f/s!An7chYIuNSruhLtMohLu-hDX4EMBag?e=dMACag">link</a></p>
+            <p>Avaliação dos alunos – <a target="_blank"
+                    href="https://docs.google.com/spreadsheets/d/1GB4MAUjsjL2-irzhbMz2aLkYp4pNRGb0/edit#gid=2093794738">link</a>
+            </p>
+            <p>Diários Digitais ESA – <a target="_blank"
+                    href="https://1drv.ms/f/s!An7chYIuNSruhLtMohLu-hDX4EMBag?e=dMACag">link</a></p>
         </div>
+
+
+
+        <!-- Tabela de turmas -->
+        <h2>Planilhas de Presença por Turma</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Turma</th>
+                    <th>Link da Planilha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>6A</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/ESuJxZYpim5LihL1RJ_Hu5IBGMkw_84XwtD5uALQbciOAg?e=GPrce3">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>6B</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EWhugEAzMKFDkJvnrLLv8DYBS47A2dGeEbF8q5uyk-Nb2Q?e=BVchya">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>7A</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7NHQEAAAABAB_YQex3pZg9TgBhRn8BYQ?e=MxHAih">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>7B</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7RHQEAAAABlc6KJVeJChJd4Uzigc83Mw?e=lE6BGL">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>8A</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7SHQEAAAABCDLIBrI2ddMy3-UCIyNFLQ?e=AvuzDp">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>8B</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7SHQEAAAABCDLIBrI2ddMy3-UCIyNFLQ?e=AvuzDp">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>9A</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7THQEAAAABaOJ8DuZXfri_PiZXc6qemg?e=eZXw1k">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>9B</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EX7chYIuNSoggO7THQEAAAABaOJ8DuZXfri_PiZXc6qemg?e=j2OErm">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>2EM</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/EaHA_JQfjfhHipZHgr3z6DYBX-wrDKDrPD-xiR0rpQtBRw?e=vrlPqC">Abrir
+                            Planilha</a></td>
+                </tr>
+                <tr>
+                    <td>3EM</td>
+                    <td><a target="_blank"
+                            href="https://1drv.ms/x/c/ee2a352e8285dc7e/Ef3P1QPAfh1NvfKqucs8rTEBAPe4OpCStoTUql-BNjnPHA?e=0Sz4Li">Abrir
+                            Planilha</a></td>
+                </tr>
+            </tbody>
+        </table>
+
 
         <div class="imagens">
             <a href="#lightbox1"><img src="esa.jpg" alt="Horário ESA"></a>
             <a href="#lightbox2"><img src="fatec.jpg" alt="Horário Fatec"></a>
         </div>
 
-        <!-- Lightbox para ESA -->
-        <div id="lightbox1" class="lightbox">
-            <a href="#"><img src="esa.jpg" alt="Horário ESA"></a>
+        <!-- Lightbox ESA -->
+        <div id="lightbox1" class="lightbox" onclick="this.style.display='none'">
+            <img src="esa.jpg" alt="Horário ESA">
         </div>
 
-        <!-- Lightbox para Fatec -->
-        <div id="lightbox2" class="lightbox">
-            <a href="#"><img src="fatec.jpg" alt="Horário Fatec"></a>
+        <!-- Lightbox Fatec -->
+        <div id="lightbox2" class="lightbox" onclick="this.style.display='none'">
+            <img src="fatec.jpg" alt="Horário Fatec">
         </div>
-
     </main>
 
     <footer>
         <p>© 2025 - Página pessoal de links e horários</p>
     </footer>
 </body>
+
 </html>
